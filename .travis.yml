@@ -1,13 +1,10 @@
-language:
-    - java
-    - python
+language: python
 
 jdk:
     - oraclejdk8
 
 python:
     - "3.5"
-
 
 env:
     global:
