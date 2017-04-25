@@ -5,8 +5,12 @@ language:
 jdk:
     - oraclejdk8
 
-python:
-    - "3.4"
+addons:
+  apt:
+    sources:
+      - deadsnakes # source required so it finds the package definition below
+    packages:
+      - python3.5
 
 env:
     global:
@@ -16,8 +20,6 @@ before_install:
     - java -version
     - "curl -vLJO -H 'Accept: application/octet-stream' \"https://github.com/SalesforceFoundation/ApexDoc/releases/download/1.1.7/apexdoc.jar\""
     - mkdir ~/documentation
-    - sudo apt-get update
-    - sudo apt-get install python3
     - ls
     - ls ~/
     - pwd
