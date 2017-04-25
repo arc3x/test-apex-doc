@@ -4,8 +4,9 @@ before_install:
     - mkdir ~/documentation
     - ls
     - ls ~/
+    - pwd
 
 script:
     - ls
-    - sh scripts/document.sh
+    - ./scripts/document.sh
     - ls
