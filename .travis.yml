@@ -6,7 +6,7 @@ jdk:
     - oraclejdk8
 
 python:
-    - 3.5
+    - "3.4"
 
 env:
     global:
@@ -16,6 +16,9 @@ before_install:
     - java -version
     - "curl -vLJO -H 'Accept: application/octet-stream' \"https://github.com/SalesforceFoundation/ApexDoc/releases/download/1.1.7/apexdoc.jar\""
     - mkdir ~/documentation
+    - sudo apt-get -y install python3-pip python-dev
+    - sudo pip3 install -U setuptools
+    - sudo pip3 install -U virtualenvwrapper
     - ls
     - ls ~/
     - pwd
@@ -31,6 +34,6 @@ script:
 after_success: |
     [ $TRAVIS_BRANCH = master ] &&
     [ $TRAVIS_PULL_REQUEST = false ] &&
-    sudo pip install ghp-import &&
+    sudo pip3 install ghp-import &&
     ghp-import -n documentation/ApexDocumentation &&
     git push -fq https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git gh-pages
