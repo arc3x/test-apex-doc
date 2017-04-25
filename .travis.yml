@@ -13,7 +13,7 @@ before_install:
     - mkdir ~/documentation
     - ls
     - ls ~/
-    - pwd
+    - pwd 
 
 script:
     - ls
