@@ -14,6 +14,7 @@ before_install:
     - ls
     - ls ~/
     - pwd
+    - ls
 
 script:
     - ls
