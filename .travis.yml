@@ -13,17 +13,10 @@ before_install:
     - mkdir ~/documentation
     - ls
     - ls ~/
-    - pwd 
+    - pwd
 
 script:
     - ls
     - chmod 777 scripts/document.sh
     - ./scripts/document.sh
     - ls documentation/ApexDocumentation
-
-after_success:
-    [ $TRAVIS_BRANCH = master ] &&
-    [ $TRAVIS_PULL_REQUEST = false ] &&
-    sudo pip install ghp-import &&
-    ghp-import -n documentation/ApexDocumentation &&
-    git push -fq https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git gh-pages
