@@ -1,8 +1,11 @@
 before_install:
     - java -version
-    - ls
     - "curl -vLJO -H 'Accept: application/octet-stream' \"https://github.com/SalesforceFoundation/ApexDoc/releases/download/1.1.7/apexdoc.jar\""
+    - mkdir ~/documentation
     - ls
+    - ls ~/
 
 script:
+    - ls
+    - sh scripts/document.sh
     - ls
