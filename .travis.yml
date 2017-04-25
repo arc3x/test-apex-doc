@@ -1,4 +1,6 @@
-language: python
+language:
+    - java
+    - python
 
 jdk:
     - oraclejdk8
