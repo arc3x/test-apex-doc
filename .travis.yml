@@ -1,22 +1,21 @@
 language:
-- java
+    - java
 
 jdk:
-- oraclejdk8
+    - oraclejdk8
 
 env:
   global:
     secure: ggSVq1xpW+OMNys1DfNua3zq/xh1rQE/rt5ozzxkhHXp3a2COgTEQGcI6/WFh3DV9VOcvn4QCl+jjM5q3/lTTfNbJR9E/VEIrqS3i+dmNoTk8SguQVWlm2HOio9WvzfrBcc2L733+Y8W974upIhD6suFjbbwS/vHgcinOLKNEw+G/sV+XK+NqyGWdyQ1BKM2t/ei6G7+lsaR2h7yWg6erYtG3Nrmc9IFOb21/jdfH6wUHzgAaJeND2HsdKdt5fNCe7w2CzLtwlIT7Pa5Suu8fpN4Aid4qk+efCERYkBjl1NGyvq33Dwv9SdUApRlDZXgeaQphTylmREJDr4rY671QNuvZffmcb4KD9sQSHXSVfglXfJ99+otI+Qcig7BHJEkM8aF9iqzlzNQUuoW+Bve7EX8kpEQhTlxpSf4YEoVVIerFJ4JDiLFXsuhutmSoZ3ZXDtqSUkYqcMyEEX89wTfX823pBtTPk7RbdDxmFZAnW5MuBlqtGuo96fuAG/fBWBhTzVwwty34GObXYQBteqZcB2WNxM0FaTV3pmSLy97j9ofTHvQTPS7kfAujCn10pSfJbrXWmDyJjh4u3C5LBIoDmNlFvknn+ViFQ3xI0NmHKJ3Ob+DQnyok5NjbdwKkuKzBHy7OAv3kbE1OLNNlQkThu53T3J7JuW6LIxeC6HcAsk=
 
 before_install:
-- 'curl -vLJO -H ''Accept: application/octet-stream'' "https://github.com/SalesforceFoundation/ApexDoc/releases/download/1.1.7/apexdoc.jar"'
-- mkdir documentation
+    - 'curl -vLJO -H ''Accept: application/octet-stream'' "https://github.com/SalesforceFoundation/ApexDoc/releases/download/1.1.7/apexdoc.jar"'
 
 script:
     - ls
 
 after_success:
-- test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" &&
- chmod 700 scripts/document.sh &&
- ./scripts/document.sh &&
- bash scripts/deploy.sh
+    - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" &&
+      chmod 700 scripts/document.sh &&
+      ./scripts/document.sh &&
+      bash scripts/deploy.sh
