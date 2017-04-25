@@ -22,7 +22,7 @@ before_install:
 
 script:
     - ls
-    - chmod 777 scripts/document.sh
+    - chmod 700 scripts/document.sh
     - ./scripts/document.sh
     - ls documentation/ApexDocumentation
 
