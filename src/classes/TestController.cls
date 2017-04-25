@@ -22,7 +22,7 @@ public with sharing class TestController {
 	/*******************************************************************************************************
     * @description Returns field describe data
     * @param objectName the name of the object to look up
-    * @param fieldName the name of the field to look up
+    * @param mycustomFIELD the name of the field to look up
     * @return the describe field result for the given field
     * @example
     * Account a = new Account();
