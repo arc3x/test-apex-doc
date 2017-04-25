@@ -1,16 +1,10 @@
 language:
     - java
-    - python
 
 jdk:
     - oraclejdk8
 
-addons:
-  apt:
-    sources:
-      - deadsnakes # source required so it finds the package definition below
-    packages:
-      - python3.5
+
 
 env:
     global:
@@ -24,7 +18,7 @@ before_install:
     - ls ~/
     - pwd
     - ls
-    - python -V
+
 
 script:
     - ls
@@ -32,9 +26,5 @@ script:
     - ./scripts/document.sh
     - ls documentation/ApexDocumentation
 
-after_success: |
-    [ $TRAVIS_BRANCH = master ] &&
-    [ $TRAVIS_PULL_REQUEST = false ] &&
-    sudo pip install ghp-import &&
-    ghp-import -n documentation/ApexDocumentation &&
-    git push -fq https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git gh-pages
+after_success:
+    - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash deploy.sh
