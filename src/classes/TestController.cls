@@ -13,13 +13,13 @@ public with sharing class TestController {
 
 	}
 
-	/*******************************************************************************************************
+	/**
     * @description specifies whether state and country picklists are enabled in this org.
     * returns true if enabled.
     */
     public static Boolean isStateCountryPicklistsEnabled;
 
-	/*******************************************************************************************************
+	/**
     * @description Returns field describe data
     * @param objectName the name of the object to look up
     * @param mycustomFIELD the name of the field to look up
