@@ -18,7 +18,7 @@ git config user.email "admin@redteal.com"
 
 git remote add upstream "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git"
 git fetch upstream
-git reset upstream/documentation
+git reset upstream/gh-pages
 
 # echo "test.com" > CNAME
 
@@ -26,4 +26,4 @@ touch .
 
 git add -A .
 git commit -m "rebuild pages at ${rev}"
-git push -q upstream HEAD:documentation
+git push -q upstream HEAD:gh-pages
