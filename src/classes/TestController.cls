@@ -1,9 +1,33 @@
+/**
+* @author Salesforce.com Foundation
+* @date 2014
+*
+* @group Accounts
+* @group-content ../../ApexDocContent/Accounts.htm
+*
+* @description Trigger Handler on Accounts that handles ensuring the correct system flags are set on
+* our special accounts (Household, One-to-One), and also detects changes on Household Account that requires
+* name updating.
+*/
 public with sharing class TestController {
 	public TestController() {
-		
+
 	}
 
+	/*******************************************************************************************************
+    * @description specifies whether state and country picklists are enabled in this org.
+    * returns true if enabled.
+    */
+    public static Boolean isStateCountryPicklistsEnabled;
 
+	/*******************************************************************************************************
+    * @description Returns field describe data
+    * @param objectName the name of the object to look up
+    * @param fieldName the name of the field to look up
+    * @return the describe field result for the given field
+    * @example
+    * Account a = new Account();
+    */
     public static void listListViews()
     {
         MetadataService.MetadataPort service = MetadataService.createService();
