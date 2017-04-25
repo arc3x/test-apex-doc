@@ -8,7 +8,6 @@ jdk:
 python:
     - "3.5"
 
-install: "pip install -r requirements.txt"
 
 env:
     global:
@@ -22,6 +21,7 @@ before_install:
     - ls ~/
     - pwd
     - ls
+    - python -V
 
 script:
     - ls
