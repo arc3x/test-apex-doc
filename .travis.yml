@@ -16,3 +16,6 @@ script:
     - chmod 777 scripts/document.sh
     - ./scripts/document.sh
     - ls
+
+after_install:
+    - ls documentation
