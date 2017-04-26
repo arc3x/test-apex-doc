@@ -20,6 +20,7 @@ git remote -v
 git branch -vv
 git fetch origin
 git reset origin/gh-pages
+git branch -vv
 
 touch .
 
