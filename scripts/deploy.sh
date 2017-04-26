@@ -19,6 +19,7 @@ git status
 git remote -v
 git branch -vv
 git fetch test-apex-doc gh-pages
+git stash
 git checkout gh-pages
 #git reset origin/gh-pages
 git branch -vv
