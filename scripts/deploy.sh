@@ -18,12 +18,11 @@ cd documentation/ApexDocumentation
 git status
 git remote -v
 git branch -vv
-git fetch origin/gh-pages
+git fetch origin
 git reset origin/gh-pages
-git checkout gh-pages
 
 touch .
 
 git add -A .
 git commit -m "rebuild pages at ${rev}"
-git push -q upstream HEAD:gh-pages
+git push -q origin HEAD:gh-pages
