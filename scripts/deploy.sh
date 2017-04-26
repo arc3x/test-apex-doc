@@ -18,7 +18,7 @@ git config user.email "admin@redteal.com"
 git status
 git remote -v
 git branch -vv
-git fetch origin gh-pages
+git fetch test-apex-doc gh-pages
 git checkout gh-pages
 #git reset origin/gh-pages
 git branch -vv
