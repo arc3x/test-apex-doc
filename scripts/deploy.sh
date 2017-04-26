@@ -7,8 +7,8 @@ rev=$(git rev-parse --short HEAD)
 cd documentation/ApexDocumentation
 
 # git init
-# git config user.name "RedTeal - Autodoc"
-# git config user.email "admin@redteal.com"
+git config user.name "RedTeal - Autodoc"
+git config user.email "admin@redteal.com"
 #
 # git remote add upstream "https://${GH_TOKEN}@github.com/test-apex-doc.git"
 # git fetch upstream
