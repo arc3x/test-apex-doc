@@ -2,7 +2,7 @@
 * @author Salesforce.com Foundation
 * @date 2014
 *
-* @group Accounts
+* @group FISHES
 *
 * @description Trigger Handler on Accounts that handles ensuring the correct system flags are set on
 * our special accounts (Household, One-to-One), and also detects changes on Household Account that requires
@@ -21,7 +21,7 @@ public with sharing class TestController {
 
 	/**
     * @description Returns field describe data
-    * @param objectNameASD2222 the name of the object to look up
+    * @param BIGOBJECTNAMECHANGE the name of the object to look up
     * @param mycustomFIELD2222 the name of the field to look up
     * @return the describe field result for the given field
     * @example
