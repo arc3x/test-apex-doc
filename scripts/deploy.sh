@@ -20,8 +20,9 @@ git remote -v
 git branch -vv
 git fetch test-apex-doc gh-pages
 git stash
+git reset test-apex-doc/gh-pages
 git checkout gh-pages
-#git reset origin/gh-pages
+
 git branch -vv
 
 touch .
