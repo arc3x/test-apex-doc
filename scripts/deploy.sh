@@ -15,11 +15,9 @@ git config user.email "admin@redteal.com"
 # git reset upstream/gh-pages
 
 # echo "test.com" > CNAME
-git status
-git remote -v
-git branch -vv
-git fetch test-apex-doc gh-pages
+
 git stash
+git fetch test-apex-doc gh-pages
 git reset test-apex-doc/gh-pages
 git checkout gh-pages
 
