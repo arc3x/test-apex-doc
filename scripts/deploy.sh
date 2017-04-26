@@ -15,6 +15,7 @@ cd documentation/ApexDocumentation
 # git reset upstream/gh-pages
 
 # echo "test.com" > CNAME
+git status
 git branch -vv
 git fetch origin/gh-pages
 git reset origin/gh-pages
